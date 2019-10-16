@@ -29,8 +29,18 @@
                 
                 <div class="color-input-box">
                     <label for="newColor">New color</label>
-                    <input type="color" value="#e9f2ff" id="newColor">
+                    <select id="newColorDropdown">
+                        <option value="#e9f2ff">Blue</option>
+                        <option value="#fffcf0">Yellow</option>
+                        <option value="#ffebf9">Pink</option>
+                        <option value="#f3fff3">Green</option>
+                    </select>
                 </div>
+                <!-- THIS IS FOR THE COLOR PICKER -->
+                <!-- <div class="color-input-box">
+                    <label for="newColor">New color</label>
+                    <input type="color" value="#e9f2ff" id="newColor">
+                </div> -->
             </div>
             
         </div>
@@ -43,6 +53,12 @@
                 </tr>
 
             </table>
+        </div>
+
+        <div class="weather">
+            <h4>Weather in Copenhagen now</h4>
+            <div id="temperature"></div>
+            <div id="weather-description"></div>
         </div>
     </div>
 

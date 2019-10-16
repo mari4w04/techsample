@@ -1,3 +1,4 @@
+//TODAY
 var objToday = new Date(),
 	weekday = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'),
 	dayOfWeek = weekday[objToday.getDay()],
@@ -17,6 +18,18 @@ var time = curHour + "." + curMinute + " " + curMeridiem;
 document.getElementById('date').textContent = date;
 document.getElementById('time').textContent = time;
 
+//TOMORROW
+// var nextDay = new Date(objToday);
+// var tomorrowsDate = nextDay.setDate(objToday.getDate()+1)
+// var objNextDay = new Date(tomorrowsDate);
+//     weekday = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'),
+//     dayOfWeekTomorrow = weekday[objNextDay.getDay()];
+
+// var dateTomorrow = dayOfWeekTomorrow;
+
+// console.log(dateTomorrow);
+
+
 // console.log(date)
 // console.log(time)
 
@@ -27,11 +40,17 @@ document.getElementById('submit-title-btn').addEventListener('click', function(e
     // console.log(newTitle);
 });
 
-document.getElementById('newColor').addEventListener('change', function(){
-    let newColor = document.getElementById('newColor').value;
-    document.querySelector('body').style.backgroundColor= newColor;
-    // console.log(newColor);
+document.getElementById('newColorDropdown').addEventListener('change', function(){
+    let dropdown = document.getElementById('newColorDropdown');
+    let selectedColor = dropdown.options[dropdown.selectedIndex].value;
+    document.querySelector('body').style.backgroundColor= selectedColor;
 })
+// THIS IS FOR THE COLOR PICKER:
+// document.getElementById('newColor').addEventListener('change', function(){
+//     let newColor = document.getElementById('newColor').value;
+//     document.querySelector('body').style.backgroundColor= newColor;
+//     // console.log(newColor);
+// })
 
 var path = 'https://cors-anywhere.herokuapp.com/https://git.wd-agency.com/snippets/2/raw';
 
@@ -79,6 +98,19 @@ function loadJSON(filePath, success, error)
 }
 
 loadJSON(path, success, error)
+
+
+function successWeather(s){
+    console.log(s);
+    var temperature = s.main.temp;
+    var description = s.weather[0].description;
+    document.querySelector('#temperature').textContent = temperature.toFixed()+"°";
+    document.querySelector('#weather-description').textContent = description;
+}
+
+var api_path = "http://api.openweathermap.org/data/2.5/weather?q=copenhagen,dk&appid=9aeaad271fe4974c31c32eeed9452f85&units=metric"
+
+loadJSON(api_path, successWeather, error)
 
 
 
