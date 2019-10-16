@@ -1,4 +1,3 @@
-//TODAY
 var objToday = new Date(),
 	weekday = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'),
 	dayOfWeek = weekday[objToday.getDay()],
@@ -18,26 +17,11 @@ var time = curHour + "." + curMinute + " " + curMeridiem;
 document.getElementById('date').textContent = date;
 document.getElementById('time').textContent = time;
 
-//TOMORROW
-// var nextDay = new Date(objToday);
-// var tomorrowsDate = nextDay.setDate(objToday.getDate()+1)
-// var objNextDay = new Date(tomorrowsDate);
-//     weekday = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'),
-//     dayOfWeekTomorrow = weekday[objNextDay.getDay()];
-
-// var dateTomorrow = dayOfWeekTomorrow;
-
-// console.log(dateTomorrow);
-
-
-// console.log(date)
-// console.log(time)
 
 document.getElementById('submit-title-btn').addEventListener('click', function(e){
     e.preventDefault();
     let newTitle = document.getElementById('newTitle').value;
     document.querySelector('h1').textContent = newTitle;
-    // console.log(newTitle);
 });
 
 document.getElementById('newColorDropdown').addEventListener('change', function(){
@@ -57,7 +41,6 @@ var path = 'https://cors-anywhere.herokuapp.com/https://git.wd-agency.com/snippe
 function search(nameKey, myArray){
     for (var i=0; i < myArray.length; i++) {
         if (myArray[i].day === nameKey) {
-            // console.log(myArray[i]);
             let newRow = document.getElementById('task-table').insertRow(-1);
             let newCell1 = newRow.insertCell(0);
             let newCell2 = newRow.insertCell(1);
@@ -70,7 +53,6 @@ function search(nameKey, myArray){
 }
 
 function success(s){
-    // console.log(s);
     search(dayOfWeek, s);
 }
 
