@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,500,700&display=swap');
+body{
+  font-family: 'Barlow', sans-serif !important;
+  background-color: #e9f2ff;
+}
+.main-box{
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,65,160,0.35);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,65,160,0.35);
+    box-shadow: 0px 0px 15px 0px rgba(0,65,160,0.35);
+    width: 690px;
+    margin: 2vw auto 0 auto;
+    border-radius: 7px;
+    height: 85vh;
+  }
+input[type=color]{
+    border: none;
+    background-color: white;
+    height: 30px;
+    width: 27px;
+    border-radius: 30px;
+    padding: 5px;
+}
+.cust-nav{
+    background-color: #f3f8ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    padding: 0 25px;
+  }
+input[type=text], input[type=text]:active, input[type=text]:focus{
+    height: 25px;
+    border: none;
+    border-bottom: 2px solid #6098ff;
+    background-color: #f3f8ff;
+    margin-bottom: 3px;
+    margin-right: 20px;
+    width: 140px;
+    outline: none;
+    font-size: 12px;
+    color: #a6a6a6;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: 'Barlow', sans-serif;
+}
+label, .time-text, th{
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    color: #6098ff;
+}
+.time-text{
+    font-size: 12px;
+}
+.btn, .btn:hover{
+    background-color: #0749ed;
+    color: white;
+    border-radius: 50px;
+    font-size: 15px;
+    padding: 4px 22px 5px;
+    height: 38px;
+    outline: none;
+    border: 0;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+}
+.title-input-box{
+    display: flex;
+    flex-direction: column;
+}
+.change-title-wrapper{
+    display: flex;
+    margin-right: 25px;
+    margin-top: 10px;
+}
+.color-input-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.color-input-box label{
+    margin-bottom: 5px;
+}
+.inputs{
+    display: flex;
+    align-items: center;
+}
+h1{
+    color: #0749ed;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1em;
+}
+.tasks table{
+    width: 100%;
+    border-collapse: collapse;
+}
+td{
+    font-size: 17px;
+    font-weight: 500;
+    color: #6098ff;
+    text-transform: uppercase;
+    height: 75px;
+    padding: 0 20px;
+}
+tr{
+    border-bottom: 2px solid #d7e9ff;
+}
+th{
+    color: #cccccc;
+    font-weight: 500;
+    text-align: left;
+    height: 35px;
+    padding: 0 20px;
+}

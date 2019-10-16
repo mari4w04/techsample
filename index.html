@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <title>My day</title>
+</head>
+<body>
+    <div class="main-box">
+        <div class="cust-nav">
+            <div class="titles">
+                <div class="time-text">
+                    <span id="date">Tuesday 12th June 2018</span>, <span id="time">10.30 AM</span>
+                </div>
+                <h1>My day</h1>
+            </div>
+
+            <div class="inputs">
+                <form action="" id="submit-title" class="change-title-wrapper">
+                    <div class="title-input-box">
+                        <label for="newTitle">New title</label>
+                        <input type="text" id="newTitle">
+                    </div>
+                    
+                    <input type="submit" class="btn" value="GO" id="submit-title-btn">
+                </form>
+                
+                <div class="color-input-box">
+                    <label for="newColor">New color</label>
+                    <input type="color" value="#e9f2ff" id="newColor">
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="tasks">
+            <table id="task-table">
+                <tr>
+                    <th>Time</th>
+                    <th>Task</th>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
